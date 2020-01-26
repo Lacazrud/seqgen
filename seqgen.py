@@ -14,13 +14,6 @@ def usage():
                  USAGE:
                          seqGen [type = rna/dna/aa] [length = SEQUENCE_LENGTH] [name = SEQUENCE_NAME]
 
-
-                 note to self: What to implement in the futur:
-                                                        -Ability to change sequence name
-                                                        -Ability to specify exon/intron CDS/(5/3)UTR
-                                                        -other file formats (FASTQ)
-                                                        -Generate sequence given shannon index
-                                                        -Generate LCR of length n and position x
                                                                                         \n""")
 
 
