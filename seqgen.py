@@ -14,17 +14,8 @@ def usage():
                  USAGE:
                          seqGen [type = rna/dna/aa] [length = SEQUENCE_LENGTH] [name = SEQUENCE_NAME]
 
-                                                                                        \n""")
+                                                                                        \n"""
 
-
-#if (len(sys.argv) == 1) or (sys.argv[1] == "--help"):
-#       usage()
-#       sys.exit()
-
-for arg in sys.argv:
-        if ("help" in arg) or (len(sys.argv) == 1) :
-                usage()
-                sys.exit()
 
 
 class randomGen():
@@ -79,12 +70,19 @@ class randomGen():
                         f.write(i)
                 f.close()
 
+                
+if __name__ == '__main__':
 
-sequence = randomGen()
+        for arg in sys.argv:
+                if ("help" in arg) or (len(sys.argv) == 1) :
+                        usage()
+                        sys.exit()
 
-results = sequence.makeSequence()
+        sequence = randomGen()
 
-sequence.makeFasta(results)
+        results = sequence.makeSequence()
+
+        sequence.makeFasta(results)
 
 
 
